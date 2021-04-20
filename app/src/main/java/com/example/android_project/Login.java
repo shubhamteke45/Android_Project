@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
         register_link = findViewById(R.id.register_link);
         forget_link = findViewById(R.id.forgetPasswordLogin);
 
-        //fAuth = FirebaseAuth.getInstance();
+        fAuth = FirebaseAuth.getInstance();
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +91,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onStart() {
