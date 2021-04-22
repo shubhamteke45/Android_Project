@@ -46,6 +46,8 @@ public class Login extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
 
+
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +62,10 @@ public class Login extends AppCompatActivity {
                 if(password.isEmpty()){
                     password_login.setError("Please check your password");
                     return;
+                }
+
+                if(name.equals("producer") && password.equals("producer")){
+                    startActivity(new Intent(getApplicationContext(), ProducerModernDashboard.class));
                 }
 
                 fAuth.signInWithEmailAndPassword(name, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {

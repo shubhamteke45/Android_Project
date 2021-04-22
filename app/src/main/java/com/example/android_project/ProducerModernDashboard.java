@@ -7,13 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 public class ProducerModernDashboard extends AppCompatActivity {
 
     CardView viewMenu, addNewProduct, pendingOrders, placedOrders;
 
-    FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
