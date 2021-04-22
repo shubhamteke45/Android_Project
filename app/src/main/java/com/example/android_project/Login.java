@@ -29,6 +29,7 @@ public class Login extends AppCompatActivity {
     String name, password;
 
     FirebaseAuth fAuth;
+    FirebaseFirestore fstore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                name = name_login.getText().toString();
+                name = name_login.getText().toString().trim();
                 password = password_login.getText().toString();
 
                 if(name.isEmpty()){
@@ -97,22 +98,13 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-    
+
     @Override
     protected void onStart() {
         super.onStart();
-        // TO check whether user is logged in or not
-        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-            DocumentReference documentReference = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
-            documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                @Override
-                public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    startActivity(new Intent(getApplicationContext(), ConsumerModernDashboard.class));
-                }
-            });
-
+        if(FirebaseAuth.getInstance().getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), ConsumerModernDashboard.class));
         }
-
     }
 
 }
