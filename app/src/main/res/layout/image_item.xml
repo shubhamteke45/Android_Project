@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cardProductName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/cardProductPrice"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="price"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/cardProductQuantity"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="quantity"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                tools:ignore="InvalidId" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cardProductImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/user"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

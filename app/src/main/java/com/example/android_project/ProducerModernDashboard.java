@@ -25,7 +25,7 @@ public class ProducerModernDashboard extends AppCompatActivity {
         viewMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ProducerModernDashboard.class));
+                startActivity(new Intent(getApplicationContext(), ProducerAddMenuItem.class));
             }
         });
 

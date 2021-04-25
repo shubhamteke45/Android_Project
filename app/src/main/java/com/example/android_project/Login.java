@@ -26,6 +26,8 @@ public class Login extends AppCompatActivity {
     EditText name_login, password_login;
     TextView register_link, forget_link;
 
+    int flag = 0;
+
     String name, password;
 
     FirebaseAuth fAuth;
@@ -65,8 +67,11 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
-                if(name.equals("producer") && password.equals("producer")){
+                if((name.equals("producer") && password.equals("producer")) || flag>0 ){
                     startActivity(new Intent(getApplicationContext(), ProducerModernDashboard.class));
+                    flag = 1;
+                    finish();
+                    return;
                 }
 
                 fAuth.signInWithEmailAndPassword(name, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
