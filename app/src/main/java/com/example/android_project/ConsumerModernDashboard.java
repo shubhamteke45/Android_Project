@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class ConsumerModernDashboard extends AppCompatActivity {
 
-    ImageView userProfile;
+    ImageView userProfile, menuDashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,15 @@ public class ConsumerModernDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), EditProfile.class));
+            }
+        });
+
+        //menu dashboard
+        menuDashboard = findViewById(R.id.menuDashboard);
+        menuDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ConsumerRecyclerView.class));
             }
         });
 
